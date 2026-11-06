@@ -12,7 +12,8 @@ st.write(
   """
 )
 
-session = get_active_session()
+cnx = st.connection("snowflake")
+session = cnx.session()
 
 # 1. データを取得
 # ※ あとで特定の行を識別するために、主キー（ORDER_IDなど）を必ず含めてください
